@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured" jcr:title="Properties" sling:resourceType="cq/gui/components/authoring/dialog">
+    <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <title jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./title"/>
+
+                    <careersoptions jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" composite="{Boolean}true" fieldLabel="Job options">
+                        <field jcr:primaryType="nt:unstructured" name="./careersoptions" sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <careersoptions jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <careertitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Job Title" name="./careertitle"/>
+                                        <jobdescription jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Job Description" useFixedInlineToolbar="{Boolean}true" name="./jobdescription"/>
+                                        <careerimagePath jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Image" name="./careerimagePath" rootPath="/content/dam"/>
+                                        <description jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Description" useFixedInlineToolbar="{Boolean}true" name="./description"/>
+
+                                        <joblinkPath jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Job Link Path" name="./joblinkPath" rootPath="/content"/>
+                                    </items>
+                                </careersoptions>
+                            </items>
+                        </field>
+                    </careersoptions>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

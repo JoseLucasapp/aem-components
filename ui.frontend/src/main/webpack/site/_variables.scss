@@ -1,0 +1,17 @@
+
+//== Font
+$font-family:           "Wix Madefor Text", serif;
+$font-size:             18px;
+$font-height:           1;
+
+//== Color
+
+// Normal mode
+$color-foreground:      #202020;
+$color-background:      #FFFFFF;
+$color-link:            #2020E0;
+
+// Dark mode
+$color-foreground-dark: $color-foreground;
+$color-background-dark: $color-background;
+$color-link-dark:       $color-link;

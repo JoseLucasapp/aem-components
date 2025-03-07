@@ -1,0 +1,42 @@
+
+
+.cmp-linkslist {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5%;
+  width: 240px;
+  min-height: 150px;
+
+  .cmp-linkslist__title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2F2B36;
+  }
+
+  .cmp-linkslist__links {
+      grid-area: link;
+      align-items: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .cmp-linkslist__link {
+          text-decoration: none;
+          color: #2F2B36;
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          gap: 8px;
+          margin: 0;
+          padding-top: 2%;
+          padding-bottom: 2%;
+
+
+          a span{
+            display: none;
+          }
+      }
+  }
+}

@@ -1,0 +1,106 @@
+//== XF Header style, used on page template
+@use '../_variables' as *;
+body.xf-web-container,
+header.experiencefragment {
+    background-color: white;
+    position: sticky;
+    top: 0;
+
+    div.root.container.responsivegrid,
+    .cmp-experiencefragment--header {
+        padding: 0 16px;
+
+        .cmp-container {
+            padding: 16px 46px;
+            border-bottom: solid 1px lightgray;
+
+            @media (max-width: 768px) {
+                padding: 16px 16px;
+            }
+
+            display: grid;
+            grid-template-columns: 250px auto min-content;
+            align-items: center;
+            justify-items: center;
+
+            .image {
+                width: 250px;
+                height: 40px;
+            }
+
+            .button {
+                cursor: pointer;
+                padding: 10.5px 24px;
+                border: solid 1px gray;
+                border-radius: 50px;
+                background-color: white;
+
+                a {
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: $color-foreground;
+                }
+
+                &:hover,
+                &:focus {
+                    background-color: invert($color-background);
+
+                    a {
+                        color: invert($color-foreground);
+                    }
+                }
+
+            }
+
+            .navigation {
+                a {
+                    color: $color-foreground;
+                    border-bottom: 2px solid transparent;
+                    transition: border-bottom 0.5s;
+                    text-decoration: none;
+
+                    &:hover,
+                    &:focus {
+                        border-bottom-color: black;
+                    }
+                }
+
+                .cmp-navigation__group {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                }
+
+                .cmp-navigation__item--level-0 {
+                    display: grid;
+                    grid-template-columns: 1fr 3fr;
+
+                    &>.cmp-navigation__group {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+
+                .cmp-navigation__item-link {
+                    display: block;
+                }
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: auto min-content;
+                text-align-last: center;
+                justify-items: stretch;
+
+                .navigation {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .cmp-container {
+        display: grid;
+        grid-template-columns: 4fr 1fr 1fr;
+    }
+} 

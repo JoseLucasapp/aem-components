@@ -1,0 +1,19 @@
+.container-lucas{
+    width: 98vw !important;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cmp-container_lucas{
+    display: flex;
+    width: 95.5%;
+    justify-content: space-between;
+    align-items: start;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}

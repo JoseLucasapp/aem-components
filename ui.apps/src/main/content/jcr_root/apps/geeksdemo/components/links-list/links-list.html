@@ -1,0 +1,24 @@
+<div class="cmp-linkslist" data-cmp-is="linkslist">
+  <!--/* Title */-->
+  <h2 class="cmp-linkslist__title">${properties.title}</h2>
+  <!--/* Link list */-->
+  <sly data-sly-list="${resource.listChildren}">
+      <div class="cmp-linkslist__links" data-sly-test="${item.name == 'links'}" 
+          data-sly-list="${item.listChildren}">
+          <sly data-sly-test="${item.linkPath}">
+            <a target="_blank" class="cmp-linkslist__link"
+              href="${item.linkPath @ context='uri'}">${item.linkText}</a>
+          </sly>
+        
+          <sly data-sly-test="${!item.linkPath}">
+            <p>${item.linkText}</p>
+          </sly>
+          
+      </div>
+  </sly>
+</div>
+
+<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @
+categories='geeksdemo.linkslist', defer=true}">
+${clientlibs.cssIncludes @ context="unsafe"}
+</sly>

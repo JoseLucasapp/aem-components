@@ -1,0 +1,30 @@
+<div class="cmp-company-description" data-cmp-is="company-description">
+  <!--/* Title */-->
+  <h2 class="cmp-company-description__title">${properties.title || 'Teste'}</h2>
+  <!--/* Description */-->
+  <div class="cmp-company-description__paragraph">
+      ${properties.description @ context = 'html'}
+      <a target="_blank" class="cmp-company-description__paragraph--button" 
+          data-sly-test="${properties.descriptionButtonLink}" 
+          href="${properties.descriptionButtonLink @ context='uri'}">${properties.descriptionButtonText || 'Button'}</a>
+  </div>
+  <!--/* Image */-->
+  <img class="cmp-company-description__image" 
+      data-sly-test="${properties.imagePath}" 
+      src="${properties.imagePath @ context='uri'}" 
+      alt="image"/>
+  <!--/* Link list */-->
+  <sly data-sly-list="${resource.listChildren}">
+      <div class="cmp-company-description__links" data-sly-test="${item.name == 'links'}" 
+          data-sly-list="${item.listChildren}">
+          <a target="_blank" class="cmp-company-description__link"
+              href="${item.linkPath @ context='uri'}">${item.linkText || 'Link'}</a>
+      </div>
+  </sly>
+</div>
+
+<!--/* Clientlib call */-->
+<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @
+  categories='geeksdemo.company-description', defer=true}">
+  ${clientlibs.cssIncludes @ context="unsafe"}
+</sly>

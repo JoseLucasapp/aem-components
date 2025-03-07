@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/geeksdemo" mode="merge"/>
+    <filter root="/content/geeksdemo" mode="merge"/>
+    <filter root="/content/dam/geeksdemo" mode="merge">
+        <exclude pattern="/content/dam/geeksdemo(/.*)?"/>
+        <include pattern="/content/dam/geeksdemo/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/geeksdemo/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/geeksdemo" mode="merge"/>
+</workspaceFilter>

@@ -1,0 +1,18 @@
+<div class="cmp-consulta-cep">
+    <h1>Consulta CEP</h1>
+
+    <div class="cmp-consulta-cep_form">
+        <input id="cmp-consulta-cep_input" class="cmp-consulta-cep_input" type="text" name="cep" placeholder="Digite o CEP">
+        <div class="cmp-consulta-cep_buttons">
+            <button id="cmp-consulta-cep_submit-get" class="cmp-consulta-cep_submit-get">GET</button>
+            <button id="cmp-consulta-cep_submit-post" class="cmp-consulta-cep_submit-post">POST</button>
+        </div>
+    </div>
+
+    <textarea id="cmp-consulta-cep_resultado" readonly></textarea>
+</div>
+
+<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @
+    categories='geeksdemo.consulta-cep', defer=true}">
+    ${clientlibs.jsAndCssIncludes @ context="unsafe"}
+</sly>

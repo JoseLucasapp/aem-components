@@ -1,0 +1,22 @@
+<div class="cmp-about-us" data-is="cmp-about-us">
+  <div class="cmp-about-us_title">
+      <sly data-sly-resource="${'title' @ resourceType='geeksdemo/components/title'}" />
+  </div>
+  <div class="cmp-about-us_image">
+      <sly data-sly-resource="${'image' @ resourceType='core/wcm/components/image/v2/image'}" />
+  </div>
+  <div class="cmp-about-us_section-text">
+      <div class="cmp-about-us_text-left">
+          <sly data-sly-resource="${'text0' @ resourceType='geeksdemo/components/text'}" />
+      </div>
+      <div class="cmp-about-us_text-right">
+          <sly data-sly-resource="${'text1' @ resourceType='geeksdemo/components/text'}" />
+      </div>
+  </div>
+</div>
+
+<!--/* Clientlib call */-->
+<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @
+  categories='geeksdemo.about-us', defer=true}">
+  ${clientlibs.cssIncludes @ context="unsafe"}
+</sly>

@@ -1,0 +1,91 @@
+.cmp-company-description {
+  background-color: #FFFFFF;
+  display: grid;
+  padding: 26px;
+  gap: 34px;
+  justify-content: space-around;
+  grid-template-columns: 45% 50%;
+  grid-template-rows: 158px max-content 84px;
+  grid-template-areas:
+      "title image"
+      "description image"
+      "link image";
+
+  @media (max-width: 768px) {
+      grid-template-areas:
+          "title"
+          "image"
+          "description"
+          "link";
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(3, min-content) 84px;
+
+      .cmp-company-description__title {
+          margin-top: 0;
+          margin-bottom: 0;
+      }
+  }
+
+  .cmp-company-description__title {
+      font-size: 65px;
+      font-weight: bold;
+      grid-area: title;
+  }
+
+  .cmp-company-description__paragraph {
+      grid-area: description;
+      line-height: 26px;
+      letter-spacing: 0%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+
+      .cmp-company-description__paragraph--button {
+          cursor: pointer;
+          padding: 10.5px 24px;
+          border: solid 1px gray;
+          border-radius: 50px;
+          background-color: black;
+          font-size: 16px;
+          text-decoration: none;
+          color: white;
+
+          &:hover,
+          &:focus {
+              background-color: white;
+              color: black;
+          }
+      }
+  }
+
+  .cmp-company-description__image {
+      grid-area: image;
+      height: 100%;
+      width: -webkit-fill-available;
+  }
+
+  .cmp-company-description__links {
+      grid-area: link;
+      align-content: end;
+      display: flex;
+      align-items: center;
+      gap: 52px;
+      border-top: solid 1px gray;
+      border-bottom: solid 1px gray;
+
+      .cmp-company-description__link {
+          text-decoration: none;
+          color: black;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          &::after {
+              content: url('../resources/image/right-arrow.svg');
+              width: 28px;
+              height: 28px;
+          }
+      }
+  }
+}

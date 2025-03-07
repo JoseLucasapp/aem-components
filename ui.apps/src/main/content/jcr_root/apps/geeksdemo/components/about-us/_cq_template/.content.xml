@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured">
+    <title
+        jcr:primaryType="nt:unstructured"
+        jcr:title="About Us"
+        sling:resourceType="geeksdemo/components/title" />
+    <image
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="core/wcm/components/image/v2/image" />
+    <text0
+        jcr:primaryType="nt:unstructured"
+        textIsRich="true"
+        text="Lorem ipsum odor amet, consectetuer adipiscing elit. Facilisi conubia habitant ultricies, augue hendrerit euismod molestie elit. Tellus lacus dis iaculis mi pellentesque amet sodales. Congue congue cubilia porta porta tempor ac hac."
+        sling:resourceType="geeksdemo/components/text" />
+    <text1
+        jcr:primaryType="nt:unstructured"
+        textIsRich="true"
+        text="Lorem ipsum odor amet, consectetuer adipiscing elit. Facilisi conubia habitant ultricies, augue hendrerit euismod molestie elit. Tellus lacus dis iaculis mi pellentesque amet sodales. Congue congue cubilia porta porta tempor ac hac."
+        sling:resourceType="geeksdemo/components/text" />
+</jcr:root>

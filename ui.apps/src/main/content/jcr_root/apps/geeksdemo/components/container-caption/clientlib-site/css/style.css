@@ -1,0 +1,16 @@
+.container-caption{
+    width: 98vw !important;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cmp-container_caption{
+    display: flex;
+    width: 95.5%;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 1%;
+}

@@ -1,0 +1,37 @@
+.section-cmp{
+  width: 95.5%;
+  display: flex;
+}
+
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.section__left{
+  width: 38%;
+    align-items: start;
+    display: flex;
+    justify-content: start;
+    padding-left: 2%;
+    padding-top: 2%;
+    height: auto;
+    border-right: 1px solid black;
+}
+
+.section__right{
+  width: 58%;
+    padding-left: 2%;
+    display: block;
+}
+
+
+.section__right p{
+  width: 100%;
+  max-width: 100%;
+  word-break: break-all;
+}

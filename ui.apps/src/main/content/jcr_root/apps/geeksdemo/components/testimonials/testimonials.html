@@ -1,0 +1,21 @@
+<div class="cmp-testimonials">
+  <h2>${properties.title}</h2>
+
+  <sly data-sly-list="${resource.listChildren}">
+    <div class="cmp-testimonials__list" data-sly-list="${item.listChildren}">
+
+      <div class="cmp-testimonials-details">
+        <h3>${item.testimonialtitle}</h3>
+        <p>${item.testimonialdescription @ context="html"}</p>
+
+
+      </div>
+    </div>
+
+</div>
+</sly>
+</div>
+
+<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @categories='geeksdemo.testimonials', defer=true}">
+  ${clientlibs.cssIncludes @ context="unsafe"}
+</sly>

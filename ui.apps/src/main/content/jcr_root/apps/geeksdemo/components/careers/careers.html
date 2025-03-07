@@ -1,0 +1,41 @@
+<div class="cmp-careers">
+  <h2>${properties.title}</h2>
+
+  <sly data-sly-list="${resource.listChildren}">
+    <div class="cmp-careers
+    __list" data-sly-list="${item.listChildren}">
+
+      <div class="cmp-careers-details">
+
+        <div class="cmp-careers-main">
+          <img class="cmp-company-description__image" data-sly-test="${item.careerimagePath}"
+            src="${item.careerimagePath @ context='uri'}" alt="image" />
+
+          <div class="text-details">
+            <h3>${item.careertitle}</h3>
+            <sly data-sly-test="${item.jobdescription}" class="description">
+              ${item.jobdescription @ context='html'}
+            </sly>
+          </div>
+
+        </div>
+
+        <div class="cmp-careers-actions">
+          <sly data-sly-test="${item.description}" class="description">
+            ${item.description @ context='html'}
+          </sly>
+          <a target="_blank" href="${item.joblinkPath @ context='uri'}"></a>
+        </div>
+
+
+      </div>
+
+    </div>
+  </sly>
+</div>
+
+<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @
+categories='geeksdemo.careers
+', defer=true}">
+  ${clientlibs.cssIncludes @ context="unsafe"}
+</sly>

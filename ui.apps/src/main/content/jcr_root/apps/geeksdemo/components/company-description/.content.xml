@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Component"
+          jcr:title="Company Description"
+          jcr:description="A component for displaying company description"
+          sling:resourceType="geeksdemo/components/company-description"
+          sling:resourceSuperType="core/wcm/components/text/v1/text"
+          componentGroup="geeksdemo"
+          path="company-description"/>

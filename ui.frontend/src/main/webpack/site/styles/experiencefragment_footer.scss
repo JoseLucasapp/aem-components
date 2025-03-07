@@ -1,0 +1,14 @@
+
+//== XF Footer style, used on page template
+@use '../_variables' as *;
+
+footer.experiencefragment {
+    padding: .5em 1em;
+
+    background-color: #FFFFFF;
+
+    .cmp-separator__horizontal-rule {
+        margin: 0;
+        border: 0;
+    }
+}

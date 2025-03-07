@@ -1,0 +1,17 @@
+<div class="cmp-consulta-clima">
+    <h1>Consulta Clima</h1>
+
+    <div class="cmp-consulta-clima_form">
+        <input id="cmp-consulta-clima_input" class="cmp-consulta-clima_input" type="text" name="cidade" placeholder="Digite a cidade">
+        <div class="cmp-consulta-clima_buttons">
+            <button id="cmp-consulta-clima_submit" class="cmp-consulta-clima_submit-get">GET</button>
+        </div>
+    </div>
+
+    <textarea id="cmp-consulta-clima_resultado" readonly></textarea>
+</div>
+
+<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @
+    categories='geeksdemo.consulta-clima', defer=true}">
+    ${clientlibs.jsAndCssIncludes @ context="unsafe"}
+</sly>

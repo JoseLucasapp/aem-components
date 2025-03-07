@@ -1,0 +1,36 @@
+<div class="cmp-featured-news">
+  <h2>${properties.title}</h2>
+
+  <div class="cmp-featured-news__button" data-sly-test="${properties.seeallnews}">
+    <a href="${properties.seeallnewslinkPath @ context='uri'}">See All News</a>
+  </div>
+
+  <sly data-sly-list="${resource.listChildren}">
+    <div class="cmp-featured-news__list" data-sly-list="${item.listChildren}">
+      <div class="cmp-featured-news-details">
+        <img class="cmp-company-description__image" data-sly-test="${item.newsimagePath}"
+          src="${item.newsimagePath @ context='uri'}" alt="image" />
+        <h3>${item.newstitle}</h3>
+        <sly data-sly-test="${item.newsdescription}">
+          ${item.newsdescription @ context='html'}
+        </sly>
+        <a href="${item.newslinkPath @ context='uri'}">
+          <img class="cmp-company-description__image" data-sly-test="${item.linkimagepath}"
+            src="${item.linkimagepath @ context='uri'}" alt="image" />
+        </a>
+      </div>
+
+    </div>
+  </sly>
+
+
+
+
+
+
+</div>
+
+<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @
+categories='geeksdemo.featured-news', defer=true}">
+  ${clientlibs.cssIncludes @ context="unsafe"}
+</sly>

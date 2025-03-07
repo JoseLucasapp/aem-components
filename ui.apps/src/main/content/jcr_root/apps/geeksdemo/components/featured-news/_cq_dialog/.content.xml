@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured" jcr:title="Properties" sling:resourceType="cq/gui/components/authoring/dialog">
+    <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <title jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./title"/>
+                    <seeallnews jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/checkbox" fieldLabel="See all news button" name="./seeallnews" text="See all news button" value="true"/>
+                    <seeallnewslinkPath jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="See all news link path" name="./seeallnewslinkPath" rootPath="/content"/>
+
+                    <newsoptions jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" composite="{Boolean}true" fieldLabel="news options">
+                        <field jcr:primaryType="nt:unstructured" name="./newsoptions" sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <newsoptions jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <newstitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="News Title" name="./newstitle"/>
+                                        <newsdescription jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="News Description" useFixedInlineToolbar="{Boolean}true" name="./newsdescription"/>
+                                        <newsimagePath jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Image" name="./newsimagePath" rootPath="/content/dam"/>
+
+                                        <newslinkPath jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="News Link Path" name="./newslinkPath" rootPath="/content"/>
+                                    </items>
+                                </newsoptions>
+                            </items>
+                        </field>
+                    </newsoptions>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

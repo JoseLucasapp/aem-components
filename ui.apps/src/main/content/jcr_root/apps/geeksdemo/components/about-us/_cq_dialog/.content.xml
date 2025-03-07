@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="About Us - Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+
+    <content jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+
+        <items jcr:primaryType="nt:unstructured">
+            <column jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                
+                <items jcr:primaryType="nt:unstructured">
+
+                    <!-- Campo de Título -->
+                    <title jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Título"
+                        name="./jcr:title"
+                        required="{Boolean}true" />
+
+                    <!-- Campo de Imagem -->
+                    <image jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        fieldLabel="Imagem"
+                        name="./fileReference"
+                        allowUpload="{Boolean}true"
+                        autoStart="{Boolean}true"
+                        mimeTypes="[image/*]" />
+
+                    <!-- Campo de Texto Esquerdo (Rich Text) -->
+                    <text0 jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldLabel="Texto Esquerdo"
+                        name="./text0" />
+
+                    <!-- Campo de Texto Direito (Rich Text) -->
+                    <text1 jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldLabel="Texto Direito"
+                        name="./text1" />
+
+                </items>
+            </column>
+        </items>
+
+    </content>
+
+</jcr:root>

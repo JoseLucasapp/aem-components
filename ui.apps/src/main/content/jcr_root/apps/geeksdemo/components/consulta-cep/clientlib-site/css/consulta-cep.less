@@ -1,0 +1,52 @@
+.cmp-consulta-cep {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .cmp-consulta-cep_form {
+
+        display: flex;
+        width: 400px;
+        flex-direction: column;
+        align-items: center;
+
+        .cmp-consulta-cep_input {
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            border-style: double;
+            border-color: #131313;
+        }
+
+        .cmp-consulta-cep_buttons {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            margin: 16px 0;
+
+            .cmp-consulta-cep_submit-post,
+            .cmp-consulta-cep_submit-get {
+                width: 150px;
+                background-color: #fff;
+                border: 1px solid gray;
+                border-radius: 50px;
+                cursor: pointer;
+                padding: 10.5px 24px;
+
+                &:hover {
+                    background-color: #131313;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    textarea {
+        width: 400px;
+        height: 300px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
