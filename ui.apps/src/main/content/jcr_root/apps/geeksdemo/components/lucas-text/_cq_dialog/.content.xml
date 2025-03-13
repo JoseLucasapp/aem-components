@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    cq:dialogMode="floating"
+    jcr:title="Text Container"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+
+    <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            
+            <text jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/richtext"
+                fieldLabel="Texto"
+                name="./text">
+                <rtePlugins jcr:primaryType="nt:unstructured">
+                    <format jcr:primaryType="nt:unstructured" features="bold,italic,underline"/>
+                    <lists jcr:primaryType="nt:unstructured" features="ordered,unordered"/>
+                    <styles jcr:primaryType="nt:unstructured" features="paraformat"/>
+                </rtePlugins>
+            </text>
+
+            <fontSize jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                fieldLabel="Tamanho da Fonte"
+                name="./fontSize">
+                <items jcr:primaryType="nt:unstructured">
+                    <small jcr:primaryType="nt:unstructured" text="Pequeno" value="12px"/>
+                    <medium jcr:primaryType="nt:unstructured" text="Médio" value="16px"/>
+                    <large jcr:primaryType="nt:unstructured" text="Grande" value="24px"/>
+                </items>
+            </fontSize>
+
+        </items>
+    </content>
+</jcr:root>

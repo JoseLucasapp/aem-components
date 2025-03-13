@@ -1,0 +1,15 @@
+<sly data-sly-use.text="com.adobe.cq.wcm.core.components.models.Text" 
+     data-sly-test="${text.text}">
+    
+    <div class="text-container">
+      <p>Font size: ${properties.fontSize}</p>
+
+        ${text.text @ context='html'}
+    </div>
+
+</sly>
+
+<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @
+    categories='geeksdemo.lucas-text', defer=true}">
+    ${clientlibs.jsAndCssIncludes @ context="unsafe"}
+</sly>

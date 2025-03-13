@@ -1,15 +1,18 @@
 <div class="section-cmp">
-  <div data-sly-test="${properties.showleftcolumn}" class="section__left">
-    ${properties.title @ context='html'}
+  <div data-sly-test="${properties.showleftcolumn}" class="section__left" id="section_left">
+    <p>${properties.title @ context='html'}</p>
   </div>
 
-  <div class="section__right">
+  <div class="section__right" id="section_right">
     <sly data-sly-resource="${resource.path @ resourceType='wcm/foundation/components/parsys'}"></sly>
   </div>
 
 </div>
 
+<input type="hidden" name="center" value="${properties.centercontent}" id="center">
+<input type="hidden" name="border" value="${properties.border}" id="border">
 
-<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @ categories='geeksdemo.section', defer=true}">
-    ${clientlibs.cssIncludes @ context="unsafe"}
+<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @
+    categories='geeksdemo.section', defer=true}">
+    ${clientlibs.jsAndCssIncludes @ context="unsafe"}
 </sly>
